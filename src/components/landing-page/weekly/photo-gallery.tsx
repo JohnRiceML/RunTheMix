@@ -1,12 +1,12 @@
 import React from 'react'
 
 export default function PhotoGallery() {
-  const photos = [
-    '/placeholder.svg?height=300&width=400',
-    '/placeholder.svg?height=300&width=400',
-    '/placeholder.svg?height=300&width=400',
-    '/placeholder.svg?height=300&width=400',
-  ]
+//   const photos = [
+//     '/placeholder.svg?height=300&width=400',
+//     '/placeholder.svg?height=300&width=400',
+//     '/placeholder.svg?height=300&width=400',
+//     '/placeholder.svg?height=300&width=400',
+//   ]
 
   return (
     <div className="mt-8">

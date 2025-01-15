@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FaTwitter, FaDiscord, FaTwitch } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { AwardIcon, HomeIcon, UserIcon } from "lucide-react";
 
 
 const fadeInUp = {
@@ -79,26 +80,34 @@ export default function RunTheMixHero() {
           <Button
             asChild
             size="lg"
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
           >
             <Link href="https://discord.com" target="_blank" rel="noopener noreferrer">
+              <UserIcon className="w-6 h-6" />
               Join the Community
             </Link>
           </Button>
           <Button
             asChild
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
           >
-            <Link href="#weeklies">Check Out Weekly Events</Link>
+            <Link href="#weeklies">
+              <AwardIcon className="w-6 h-6" />
+              Check Out Weekly Events
+            </Link>
           </Button>
           <Button
             asChild
             size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full text-lg"
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
           >
-            <Link href="#space-rental">Rent Our Space</Link>
+            <Link href="#space-rental">
+              <HomeIcon className="w-6 h-6" />
+              Rent Our Space
+            </Link>
           </Button>
+
         </motion.div>
       </motion.div>
 
