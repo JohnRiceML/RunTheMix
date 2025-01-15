@@ -81,12 +81,12 @@ export default function RunTheMixHero() {
             <img
               src="/rtm-logo.png"
               alt="RunTheMix Explosion Logo"
-              className="w-52"
+              className="w-28 md:w-52"
             />
           </motion.div>
         )}
         <motion.h1
-          className="text-4xl sm:text-4xl lg:text-4xl font-extrabold mb-6 tracking-tight"
+          className="text-lg sm:text-3xl lg:text-4xl font-extrabold mb-6 tracking-tight"
           variants={fadeInUp}
         >
           {/* If you want to remove the original RTM logo at the top, comment this out */}
