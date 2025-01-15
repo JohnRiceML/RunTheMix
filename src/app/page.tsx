@@ -1,7 +1,6 @@
-import Image from "next/image";
 import RunTheMixHero from "../components/landing-page/hero";
 import Navigation from "@/components/nav/navigation";
-import Hero from "@/components/landing-page/hero2";
+// import Hero from "@/components/landing-page/hero2";
 import RunTheMixIntro from "@/components/landing-page/run-the-mix-intro";
 import WeekliesSection from "@/components/landing-page/weekly/weeklies-section";
 import MediaHighlights from "@/components/landing-page/MediaHighlights";

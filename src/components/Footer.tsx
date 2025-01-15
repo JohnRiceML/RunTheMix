@@ -58,7 +58,7 @@ export default function Footer() {
             <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
               Join our Discord
             </a>
-            <p className="text-xl font-semibold mt-6 mb-2">We'd Love to Hear from You!</p>
+            <p className="text-xl font-semibold mt-6 mb-2">We&apos;d Love to Hear from You!</p>
             <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
               Contact Us
             </Link>

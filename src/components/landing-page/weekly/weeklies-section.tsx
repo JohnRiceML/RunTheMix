@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { MapPin, Calendar, Clock, Gamepad2 } from 'lucide-react'
+import { MapPin, Calendar, Clock } from 'lucide-react'
 import WeeklySchedule from './weekly-schedule'
 import PhotoGallery from './photo-gallery'
 import SupportedGames from './supported-games'

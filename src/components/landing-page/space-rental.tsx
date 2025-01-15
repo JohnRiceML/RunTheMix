@@ -71,7 +71,7 @@ export default function SpaceRental() {
             </div>
             
             <div>
-              <h3 className="text-xl font-semibold mb-4">Who's Used Our Space:</h3>
+              <h3 className="text-xl font-semibold mb-4">Who&apos;s Used Our Space:</h3>
               <div className="grid gap-4">
                 {localBusinesses.map((business, index) => (
                   <Card key={index}>

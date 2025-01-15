@@ -23,7 +23,7 @@ import {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We play a variety of games, including popular fighting games, party games, and classic multiplayer titles. The game selection often rotates, so there's always something new to try!
+                We play a variety of games, including popular fighting games, party games, and classic multiplayer titles. The game selection often rotates, so there&apos;s always something new to try!
               </AccordionContent>
             </AccordionItem>
   
@@ -31,11 +31,11 @@ import {
               <AccordionTrigger>
                 <span className="flex items-center gap-2">
                   <Utensils className="w-5 h-5" />
-                  What's the food and drink policy?
+                  What&apos;s the food and drink policy?
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                GameZenter offers a delicious menu including burgers, paninis, and a selection of beers. Outside food and drinks are not allowed, but you're welcome to enjoy our tasty offerings while you play!
+                GameZenter offers a delicious menu including burgers, paninis, and a selection of beers. Outside food and drinks are not allowed, but you&apos;re welcome to enjoy our tasty offerings while you play!
               </AccordionContent>
             </AccordionItem>
   
@@ -59,7 +59,7 @@ import {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We provide all necessary gaming equipment, including consoles and controllers. However, if you have a preferred controller, you're welcome to bring it. Just make sure it's compatible with our systems!
+                We provide all necessary gaming equipment, including consoles and controllers. However, if you have a preferred controller, you&apos;re welcome to bring it. Just make sure it&apos;s compatible with our systems!
               </AccordionContent>
             </AccordionItem>
   
@@ -71,7 +71,7 @@ import {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We're here almost every Wednesday – check our Discord server for the most up-to-date schedule and any changes. We occasionally host special events on other days of the week, so stay tuned for announcements!
+                We&apos;re here almost every Wednesday – check our Discord server for the most up-to-date schedule and any changes. We occasionally host special events on other days of the week, so stay tuned for announcements!
               </AccordionContent>
             </AccordionItem>
   
@@ -83,7 +83,7 @@ import {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We do our best to maintain our regular schedule during winter months. However, in cases of severe weather or dangerous road conditions, we may postpone or cancel events for everyone's safety. Always check our Discord or social media for the latest updates during inclement weather.
+                We do our best to maintain our regular schedule during winter months. However, in cases of severe weather or dangerous road conditions, we may postpone or cancel events for everyone&apos;s safety. Always check our Discord or social media for the latest updates during inclement weather.
               </AccordionContent>
             </AccordionItem>
   

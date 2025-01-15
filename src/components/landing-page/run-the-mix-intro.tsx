@@ -14,23 +14,23 @@ export default function RunTheMixIntro() {
 
                         <p className="text-lg">
                             Run The Mix is proud to announce its new home in the heart of the Twin Cities.
-                            With deep Minnesota roots, we've been a cornerstone of the local gaming community,
+                            With deep Minnesota roots, we&apos;ve been a cornerstone of the local gaming community,
                             and our new location allows us to serve you even better.
                         </p>
                         <p className="text-lg">
-                            Our passion for fighting games drives everything we do. We've created a space where
+                            Our passion for fighting games drives everything we do. We&apos;ve created a space where
                             gamers of all levels can come together, compete, and grow. From casual players to
                             tournament champions, everyone has a place at Run The Mix.
                         </p>
                         <p className="text-lg">
                             Every week, we host fighting game events featuring titles like <em>Street Fighter 6</em>,
                             <em>Guilty Gear Strive</em>, <em>Melty Blood Type Lumina</em>, and <em>Tekken 7</em>.
-                            But we're not just limited to these—any fighting game that comes through our doors is welcome!
+                            But we&apos;re not just limited to these—any fighting game that comes through our doors is welcome!
                         </p>
 
 
                         <p className="text-lg font-semibold">
-                            Run The Mix is more than just a venue—it's a community hub for the Twin Cities gaming scene.
+                            Run The Mix is more than just a venue—it&apos;s a community hub for the Twin Cities gaming scene.
                             Join us and be a part of something amazing!            </p>
                     </div>
 
