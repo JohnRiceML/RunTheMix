@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FaTwitter, FaDiscord, FaTwitch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { AwardIcon, HomeIcon, UserIcon } from "lucide-react";
-
 
 const fadeInUp = {
   initial: { opacity: 0, y: 50 },
@@ -17,6 +17,18 @@ const staggerContainer = {
 };
 
 export default function RunTheMixHero() {
+  // Control the visibility of the GIF and the "explosion" logo
+  const [showGif, setShowGif] = useState(true);
+  const [showExplosion, setShowExplosion] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGif(false);
+      setShowExplosion(true);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gray-900 text-white">
@@ -47,31 +59,52 @@ export default function RunTheMixHero() {
         initial="initial"
         animate="animate"
       >
+        {/* GIF: only visible when showGif = true */}
+        {showGif && (
+          <motion.div variants={fadeInUp} className="mb-8">
+            <img
+              src="hadouken1.gif"
+              alt="Exciting Animation"
+              className="w-full max-w-md mx-auto"
+            />
+          </motion.div>
+        )}
+
+        {/* Explosive RTM Logo: only appears after the GIF disappears */}
+        {showExplosion && (
+          <motion.div
+            className="mb-8"
+            initial={{ scale: 0, rotate: 0, opacity: 0 }}
+            animate={{ scale: 1, rotate: 360, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <img
+              src="/rtm-logo.png"
+              alt="RunTheMix Explosion Logo"
+              className="w-52"
+            />
+          </motion.div>
+        )}
         <motion.h1
           className="text-4xl sm:text-4xl lg:text-4xl font-extrabold mb-6 tracking-tight"
           variants={fadeInUp}
         >
-          <div className=" flex justify-center pb-3">
+          {/* If you want to remove the original RTM logo at the top, comment this out */}
+          {/*
+          <div className="flex justify-center pb-3">
             <div className="flex-shrink-0">
               <Link href="/">
                 <img
                   src="/rtm-logo.png"
                   alt="RunTheMix Logo"
-                  className="h-48 w-auto" // Adjust height and width as needed
+                  className="h-48 w-auto"
                 />
               </Link>
             </div>
-
           </div>
-
-          Play, Compete, and Connect <br></br> Weekly events, community spaces, and more!
+          */}
+          Play, Compete, and Connect <br /> Weekly events, community spaces, and more!
         </motion.h1>
-        <motion.p
-          className="text-xl sm:text-2xl lg:text-3xl mb-8 max-w-3xl"
-          variants={fadeInUp}
-        >
-          {/* Play, Compete, and Connect – Weekly events, community spaces, and more! */}
-        </motion.p>
 
         <motion.div
           className="flex flex-wrap justify-center gap-4"
@@ -80,9 +113,13 @@ export default function RunTheMixHero() {
           <Button
             asChild
             size="lg"
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
+            className="bg-black/80 border-2 border-red-600 text-red-600 font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2 hover:bg-red-600 hover:text-white"
           >
-            <Link href="https://discord.com" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://discord.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <UserIcon className="w-6 h-6" />
               Join the Community
             </Link>
@@ -90,7 +127,7 @@ export default function RunTheMixHero() {
           <Button
             asChild
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
+            className="bg-black/80 border-2 border-blue-600 text-blue-600 font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2 hover:bg-blue-600 hover:text-white"
           >
             <Link href="#weeklies">
               <AwardIcon className="w-6 h-6" />
@@ -100,14 +137,13 @@ export default function RunTheMixHero() {
           <Button
             asChild
             size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2"
+            className="bg-black/80 border-2 border-green-600 text-green-600 font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2 hover:bg-green-600 hover:text-white"
           >
             <Link href="#space-rental">
               <HomeIcon className="w-6 h-6" />
               Rent Our Space
             </Link>
           </Button>
-
         </motion.div>
       </motion.div>
 
