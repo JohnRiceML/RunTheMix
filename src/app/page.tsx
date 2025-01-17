@@ -14,10 +14,9 @@ export default function Home() {
     <div>
       <ResponsiveAnnouncementBanner 
         message="🎮 🕹 Weekly Today at the new Location - Sign Up to compete By Clicking the button "
-        link="https://www.start.gg/tournament/runthemix-weekly-127/details"
+        link="https://www.start.gg/tournament/runthemix"
         linkText="Pre Register"
       />
-      
       <Navigation/>
       <RunTheMixHero/>
       <RunTheMixIntro/>
