@@ -7,7 +7,7 @@ import MediaHighlights from "@/components/landing-page/MediaHighlights";
 import Faqs from "@/components/landing-page/faq";
 import Footer from "@/components/Footer";
 import ResponsiveAnnouncementBanner from '@/components/responsive-announcement-banner'
-import FightingGame from '@/components/FightingGame'
+// import FightingGame from '@/components/FightingGame'
 import PeteBio from "@/components/pete-bio";
 
 

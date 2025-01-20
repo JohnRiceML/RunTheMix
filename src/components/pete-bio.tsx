@@ -94,7 +94,7 @@ export default function PeteBio() {
                         >
                             <Image
                                 src="/pete-sp1.png"
-                                alt="Pete's character"
+                                alt="Petes character"
                                 width={190}
                                 height={150}
                                 className="rounded-lg object-cover border-4 border-purple-500 shadow-lg shadow-purple-500/50"

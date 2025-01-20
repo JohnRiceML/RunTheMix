@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, HomeIcon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,10 +23,7 @@ const Navigation = () => {
             console.warn(`Section with id "${id}" not found.`);
         }
         setIsOpen(false)
-
     };
-
-  
 
     return (
         <nav className="bg-black text-white sticky top-0 z-50">
@@ -33,13 +31,13 @@ const Navigation = () => {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <a href="/">
+                        <Link href="/">
                             <img
                                 src="/rtm-logo.png"
                                 alt="RunTheMix Logo"
                                 className="h-16 w-auto"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Centered navigation */}
@@ -131,8 +129,7 @@ const Navigation = () => {
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <button
-                                onClick={() => {
-                                    scrollToSection('#Home')}}
+                                onClick={() => scrollToSection('#Home')}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 Home
