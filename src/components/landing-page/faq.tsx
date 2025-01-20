@@ -9,6 +9,7 @@ import {
   
   export default function Faqs() {
     return (
+      <section id="#FAQ">
       <Card className="w-full max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">Everything You Need to Know</CardTitle>
@@ -101,6 +102,7 @@ import {
           </Accordion>
         </CardContent>
       </Card>
+      </section>
     )
   }
   

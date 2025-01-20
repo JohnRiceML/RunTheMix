@@ -1,13 +1,28 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, HomeIcon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const HEADER_OFFSET = 80; // Adjust this value based on your header height
+
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - HEADER_OFFSET;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            });
+        } else {
+            console.warn(`Section with id "${id}" not found.`);
+        }
+    };
 
     return (
         <nav className="bg-black text-white sticky top-0 z-50">
@@ -15,23 +30,48 @@ const Navigation = () => {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/">
+                        <a href="/">
                             <img
                                 src="/rtm-logo.png"
                                 alt="RunTheMix Logo"
                                 className="h-16 w-auto"
                             />
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Centered navigation */}
                     <div className="hidden md:flex items-center justify-center flex-grow">
                         <div className="flex space-x-6">
-                            <Link href="/dashboard" className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200">Home</Link>
-                            <Link href="/analytics" className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200">Events</Link>
-                            <Link href="/integrations" className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200">FAQ</Link>
-                            <Link href="/integrations" className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200">Event Space</Link>
-                            <Link href="/activity" className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200">Vods</Link>
+                            <button
+                                onClick={() => scrollToSection('#Home')}
+                                className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            >
+                                Home
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('#About')}
+                                className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('#Events')}
+                                className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            >
+                                Events
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('#FAQ')}
+                                className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            >
+                                FAQ
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('#Vods')}
+                                className="text-gray-300 hover:text-white px-4 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                            >
+                                Vods
+                            </button>
                         </div>
                     </div>
 
@@ -87,10 +127,36 @@ const Navigation = () => {
                         className="md:hidden bg-black"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            <Link href="/dashboard" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Dashboard</Link>
-                            <Link href="/analytics" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Analytics</Link>
-                            <Link href="/integrations" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Integrations</Link>
-                            <Link href="/activity" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium">Activity</Link>
+                            <button
+                                onClick={() => scrollToSection('Home')}
+                                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+                            >
+                                Home
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('About')}
+                                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('Events')}
+                                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+                            >
+                                Events
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('FAQ')}
+                                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+                            >
+                                FAQ
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('Vods')}
+                                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
+                            >
+                                Vods
+                            </button>
                             <Button variant="outline" className="w-full mt-4 text-black border-white hover:bg-white hover:text-black transition-colors duration-200">
                                 <Phone className="mr-2 h-4 w-4" /> Contact
                             </Button>
@@ -99,7 +165,7 @@ const Navigation = () => {
                 )}
             </AnimatePresence>
         </nav>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;

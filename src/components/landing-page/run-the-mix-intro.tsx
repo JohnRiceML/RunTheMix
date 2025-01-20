@@ -26,6 +26,7 @@ export default function RunTheMixIntro() {
     return (
         <motion.section
             ref={sectionRef}
+            id="#About"
             className="relative py-12 bg-gray-100 overflow-hidden"
             style={{ backgroundImage: "url('/about-banner.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
             initial="hidden"

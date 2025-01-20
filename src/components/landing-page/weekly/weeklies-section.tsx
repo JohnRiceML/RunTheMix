@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export default function WeekliesSection() {
     return (
-        <section className="py-12 bg-background">
+        <section id='#Events' className="py-12 bg-background">
             <div className="container mx-auto px-4">
                 <Card className="overflow-hidden">
                     <CardHeader className="bg-black text-white p-6">

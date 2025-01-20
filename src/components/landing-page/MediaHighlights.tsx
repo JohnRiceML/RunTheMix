@@ -10,7 +10,7 @@ const subHighlights = [
 
 export default function MediaHighlights() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <section id="#Vods" className="py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Relive the Action
