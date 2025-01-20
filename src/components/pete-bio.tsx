@@ -71,7 +71,7 @@ export default function PeteBio() {
                                     </span>
                                 </p>
                             </div>
-                            <p className="italic text-gray-400 text-sm">"I&quot;m Pete, and I&quot;m always ready for a challenge!"</p>
+                            <p className="italic text-gray-400 text-sm">&quot;I&quot;m Pete, and I&quot;m always ready for a challenge!&quot;</p>
                             <Button
                             onClick={() => setShowFightGame(false)}
                             className="w-full text-lg font-semibold py-6"
