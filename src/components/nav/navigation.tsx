@@ -14,8 +14,6 @@ const Navigation = () => {
         if (section) {
             const elementPosition = section.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition - HEADER_OFFSET;
-
-
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth',
