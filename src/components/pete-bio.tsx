@@ -33,7 +33,7 @@ export default function PeteBio() {
                             }}
                         />
                         <CardTitle className="flex justify-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                            Pete's Character Bio
+                            Pete&apos;s Character Bio
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10 grid grid-cols-2 items-center gap-8 p-6">
@@ -71,7 +71,7 @@ export default function PeteBio() {
                                     </span>
                                 </p>
                             </div>
-                            <p className="italic text-gray-400 text-sm">"I'm Pete, and I'm always ready for a challenge!"</p>
+                            <p className="italic text-gray-400 text-sm">"I&apos;m Pete, and I&apos;m always ready for a challenge!"</p>
                             <Button
                             onClick={() => setShowFightGame(false)}
                             className="w-full text-lg font-semibold py-6"
