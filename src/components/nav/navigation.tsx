@@ -15,6 +15,7 @@ const Navigation = () => {
             const elementPosition = section.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition - HEADER_OFFSET;
 
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth',
@@ -22,7 +23,11 @@ const Navigation = () => {
         } else {
             console.warn(`Section with id "${id}" not found.`);
         }
+        setIsOpen(false)
+
     };
+
+  
 
     return (
         <nav className="bg-black text-white sticky top-0 z-50">
@@ -128,31 +133,32 @@ const Navigation = () => {
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <button
-                                onClick={() => scrollToSection('Home')}
+                                onClick={() => {
+                                    scrollToSection('#Home')}}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 Home
                             </button>
                             <button
-                                onClick={() => scrollToSection('About')}
+                                onClick={() => scrollToSection('#About')}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 About
                             </button>
                             <button
-                                onClick={() => scrollToSection('Events')}
+                                onClick={() => scrollToSection('#Events')}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 Events
                             </button>
                             <button
-                                onClick={() => scrollToSection('FAQ')}
+                                onClick={() => scrollToSection('#FAQ')}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 FAQ
                             </button>
                             <button
-                                onClick={() => scrollToSection('Vods')}
+                                onClick={() => scrollToSection('#Vods')}
                                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-lg font-medium"
                             >
                                 Vods
